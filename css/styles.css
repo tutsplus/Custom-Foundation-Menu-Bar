@@ -1,0 +1,104 @@
+body {
+    background-color: #ccc;
+}
+/** Set the backgrounds for the different sections **/
+.header-area {
+    background-color: #13a7c7;
+    min-height: 160px;
+}
+.navigation-area {
+    background-image: url('../img/navigation-container.jpg');
+    background-repeat: repeat-x;
+}
+.content-area {
+    padding: 50px 0 70px 0;
+}
+.footer-area {
+    background-color: #1f1f1f;
+    color: #fff;
+    min-height: 50px;
+    padding: 20px 0 0 0;
+}
+.full-width {
+    min-width:100%;
+    position: relative;
+}
+h2 {
+    color: #fff;
+    font-weight: normal;
+    margin-top: 50px;
+}
+
+/** Changes background color, height and margin of the border **/
+.top-bar {
+    background: none;
+    height: 58px;
+    line-height: 58px;
+    margin-bottom: 0;
+}
+/** Removes black background on menu bar **/
+.top-bar-section ul {
+    background: none;
+    text-transform: uppercase;
+}
+/** Removes black background on menu item **/
+.top-bar-section li a:not(.button) {
+    background: none;
+    line-height: 58px;
+    padding: 0 27px;
+}
+
+/** Changes the active menu item from default black to a gradient **/
+.top-bar-section ul li.active > a {
+    background:  rgb(0, 0, 0);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%) repeat scroll 0 0 transparent;
+    color: #fff;
+}
+/** Changes the hover state of non active menu items **/
+.top-bar-section li:hover a {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.7) 100%) repeat scroll 0 0 transparent;
+    color: #fff;
+}
+/** Changes non active menu items text color to black **/
+.top-bar-section ul li > a {
+    color: #2d2d2d;
+}
+/** Changes the hover state of dropdown menu items **/
+.top-bar-section ul.dropdown li a:hover:not(.button) {
+    background: none repeat scroll 0 0 rgba(0, 0, 0, 0.9);
+}
+/** IMPORTANT fill for the ul dropdown container **/
+.top-bar-section ul.dropdown {
+    background: #333;
+    color: #fff;
+}
+/** This fixes the position and the color of the dropdown arrow **/
+.top-bar-section .has-dropdown > a:after {
+    border-color: rgba(0, 0, 0, 1) transparent transparent;
+    margin-top: 2.5px;
+}
+
+@media only screen and (max-width: 942px) {
+    /* Makes the responsive menu fit in the navigation container and change its background to black */
+    .top-bar ul {
+        background-color: rgba(0, 0, 0, 0.5);
+        padding-bottom: 13px;
+    }
+    /* Change non active menu item color to black */
+    .top-bar-section ul li > a {
+        color: #fff;
+    }
+    /* Gives the dropdown ul a black fill */
+    .top-bar-section ul {
+        background: #000;
+    }
+    /* Give the BACK button after going in a submenu the appropriate filling */
+    .top-bar-section .dropdown li.title h5 a {
+        line-height: 57px;
+    }
+    /* This fixes the position and the color of the dropdown arrow */
+    .top-bar-section .has-dropdown > a:after {
+        border-color: rgba(255, 255, 255, 1) transparent transparent;
+        margin-top: 2.5px;
+    }
+} /* end media query */
